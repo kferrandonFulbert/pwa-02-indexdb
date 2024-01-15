@@ -23,11 +23,12 @@ Ces instructions vous aideront à configurer et à exécuter l'application Liste
 3. Lancez un serveur local pour exécuter l'application.
 4. Ouvrez l'application dans votre navigateur web.
 
-## Fonctionnalités
+## Fonctionnalités à développer
 
-- **Liste de Bières :** Affiche une liste de bières récupérées soit depuis IndexedDB soit depuis l'API Punk.
-- **Barre de Recherche :** Permet aux utilisateurs de rechercher des bières par nom.
 - **Stockage Local :** Utilise IndexedDB pour stocker localement les données des bières pour un accès hors ligne.
+- Pour cela si la base de données locale est vide, tu dois intérogger l'api pour inserrer toutes les bières dans la base.
+- Si la base de données locales à déja des enregistrements, on interrogera la base de données locale pour afficher les bieres.
+- /!\ de bien initialiser la DB et de sa structure à l'initialisation de la page.
 
 ## Utilisation
 
