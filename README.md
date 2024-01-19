@@ -2,6 +2,10 @@
 
 Une application web simple pour répertorier et rechercher des bières. L'application utilise IndexedDB pour stocker localement les données des bières et récupère des informations supplémentaires sur les bières depuis l'API Punk en utilisant l'API Fetch.
 
+## attendu
+
+https://kferrandonfulbert.github.io/pwa-02-indexdb/
+
 ## Mise en route
 
 Ces instructions vous aideront à configurer et à exécuter l'application Liste de Bières sur votre machine locale.
