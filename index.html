@@ -33,9 +33,10 @@
     const db = await initDB();
 
     async function initDB() {
+      console.log("creation de la db");
       return new Promise((resolve, reject) => {
+        
         const request = indexedDB.open('BeerDB', 1);
-
         request.onupgradeneeded = (event) => {
           const db = event.target.result;
           const store = db.createObjectStore('beers', { keyPath: 'id' });
@@ -84,7 +85,7 @@
 
         // Si la base de données est vide, récupérer depuis l'API et ajouter à la base de données
         if (beers.length === 0) {
-          beers = await fetch('https://api.punkapi.com/v2/beers')
+          beers = await fetch('https://punkapi.online/v3/beers?page=1')
             .then(response => response.json())
             .then(data => {
               data.forEach(async (beer) => {

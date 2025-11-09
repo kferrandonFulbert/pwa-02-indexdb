@@ -4,7 +4,7 @@ var beers;
 ***************************/
       // Function to fetch beers from Punk API
       async function modelFetchBeers() {
-        beers = await fetch('https://api.punkapi.com/v2/beers')
+        beers = await fetch('https://punkapi.online/v3/beers?page=1')
           .then(response => response.json())
           .then(data => displayBeers(data))
           .catch(error => console.error('Error fetching beers:', error));
@@ -16,7 +16,7 @@ var beers;
       var template = (beer) => `
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="${beer.image_url}" class="card-img-top" alt="${beer.name}">
+                        <img src="../punkapi/img/${beer.image}" class="card-img-top" alt="${beer.name}">
                         <div class="card-body">
                             <h5 class="card-title">${beer.name}</h5>
                             <p class="card-text">${beer.description}</p>
