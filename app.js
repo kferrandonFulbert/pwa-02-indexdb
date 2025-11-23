@@ -16,7 +16,7 @@ var beers;
       var template = (beer) => `
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="../punkapi/img/${beer.image}" class="card-img-top" alt="${beer.name}">
+                        <img src="https://punkapi.online/v3/images/${beer.image}" style="height:200px;width:100px;" class="" alt="${beer.name}">
                         <div class="card-body">
                             <h5 class="card-title">${beer.name}</h5>
                             <p class="card-text">${beer.description}</p>
